@@ -1,0 +1,25 @@
+.title-animation {
+  opacity: 1;
+}
+
+.right-animation {
+  opacity: 0;
+  transform: translateX(15rem);
+  transition: all 0.5s ease;
+}
+
+.right-animation-start {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.left-animation {
+  opacity: 0;
+  transform: translateX(-15rem);
+  transition: all 0.5s ease;
+}
+
+.left-animation-start {
+  opacity: 1;
+  transform: translateX(0);
+}

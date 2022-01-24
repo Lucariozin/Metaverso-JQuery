@@ -1,0 +1,51 @@
+:root {
+  --gray-50: #F7FAFC;
+  --gray-400: #A0AEC0;
+  --gray-700: #2D3748;
+  --gray-800: #1f1f1f;
+
+  --pink-shadow: #b9275fc2;
+  --pink-500: #ff5c9b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--gray-50);
+}
+
+h2 {
+  color: var(--gray-700);
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+q {
+  font-style: italic;
+}
+
+p {
+  font-size: 2rem;
+  color: var(--gray-700);
+  line-height: 3rem;
+  letter-spacing: 0.03rem;
+}
+
+@media (max-width: 450px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
