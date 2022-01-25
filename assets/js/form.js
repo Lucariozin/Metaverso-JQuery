@@ -2,14 +2,11 @@ $(function() {
   var documentTop = $(document).scrollTop();
   var form = $('form');
 
-  var inputName = $('#name');
-  var inputNameValue = inputName.val();
-
-  var inputLastName = $('#last-name');
-  var inputLastNameValue = inputLastName.val();
-
-  var inputEmail = $('#email');
-  var inputEmailValue = inputEmail.val();
+  var inputsForm = {
+    name: $("#name"),
+    lastName: $("#last-name"),
+    email: $("#email"),
+  };
 
   function formAnimation(documentTop) {
     var offset = $(window).height() * (3 / 4);
@@ -30,18 +27,12 @@ $(function() {
     formAnimation(documentTop);
   }, 50));
 
-  inputName.keyup(function() { inputNameValue = inputName.val() });
-
-  inputLastName.keyup(function() { inputLastNameValue = inputLastName.val() });
-
-  inputEmail.keyup(function() { inputEmailValue = inputEmail.val() });
-
   form.submit(function() {
-    console.log(inputEmailValue, inputNameValue, inputLastNameValue);
+    console.log(inputsForm.email.val(), inputsForm.name.val(), inputsForm.lastName.val());
     
-    inputEmail.val('');
-    inputName.val('');
-    inputLastName.val('');
+    inputsForm.email.val('');
+    inputsForm.name.val('');
+    inputsForm.lastName.val('');
 
     return false;
   });
